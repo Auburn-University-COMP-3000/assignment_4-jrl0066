@@ -8,14 +8,45 @@ class Temperature {
 		       degreesFahrenheit,
 		       degreesCelsius;
 	public:
-		void setTempKelvin(double degreesKelvin) {  }
-		double getTempKelvin() {  }
-		void setTempCelsius() {  }
-		double getTempCelsius() {  } 
-		void setTempFahrenheit() {  }
-		double getTempFahrenheit() { }
+		void setKelvin() {  }
+		double getKelvin() {  }
+		void setCelsius(){  }
+		double getCelsius() {  } 
+		void setFahrenheit() {  }
+		double getFahrenheit() { }
 };
 
 int main() {
 
+}
+
+double Temperature::getKelvin(){
+
+
+
+}
+double Temperature::getCelsius(){
+
+
+
+}
+double Temperature::getFahrenheit(){
+
+
+
+}
+void Temperature::setKelvin(){
+
+
+
+}
+void Temperature::setCelsius(){
+
+
+
+}
+void Temperature::setFahrenheit(){
+
+
+	
 }
