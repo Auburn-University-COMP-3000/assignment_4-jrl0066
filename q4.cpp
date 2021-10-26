@@ -35,19 +35,19 @@ int main(){
   Month month1, month2, nextMnth;
   
 
-  // cout << "Enter the month by number: ";
-  // month1.getMonthByNumber(cin);
+  cout << "Enter the month by number: ";
+  month1.getMonthByNumber(cin);
 
-  // cout << "\nThe number of the current month is: ";
-  // month1.outputMonthNumber(cout);
-  // cout << "The current month by char is: ";
-  // month1.outputMonthName(cout);
-  // cout << "\n\nThe number of the next month is : ";
-  // nextMnth = month1.nextMonth();
-  // nextMnth.outputMonthNumber(cout);
-  // cout << "The next month by char is: ";
-  // nextMnth.outputMonthName(cout);
-  // cout << endl;
+  cout << "\nThe number of the current month is: ";
+  month1.outputMonthNumber(cout);
+  cout << "The current month by char is: ";
+  month1.outputMonthName(cout);
+  cout << "\n\nThe number of the next month is : ";
+  nextMnth = month1.nextMonth();
+  nextMnth.outputMonthNumber(cout);
+  cout << "The next month by char is: ";
+  nextMnth.outputMonthName(cout);
+  cout << endl;
 
   cout << "Enter the month by the first 3 leters: ";
   month2.getMonthByName(cin);
@@ -128,41 +128,43 @@ void Month::getMonthByNumber(istream& mIn){
 void Month::getMonthByName(istream& mIn){
   char c1, c2, c3;
   mIn >> c1 >> c2 >> c3;
-
-  if(c1 == 'j'||'J' && c2 == 'a'|| "A" && c3 == 'n'||'N'){
+  c1 = tolower(c1);
+  c2 = tolower(c2);
+  c3 = tolower(c3);
+  if(c1 == 'j' && c2 == 'a' && c3 == 'n'){
     mnth = 1;
   }
-  else if(c1 == 'f'||'F' && c2 == 'e'|| "E" && c3 == 'b'||'B'){
+  else if(c1 == 'f' && c2 == 'e' && c3 == 'b'){
     mnth = 2;
   }
-  else if(c1 == 'm'||'M' && c2 == 'a'|| "A" && c3 == 'r'||'R'){
+  else if(c1 == 'm' && c2 == 'a' && c3 == 'r'){
     mnth = 3;
   }
-  else if(c1 == 'a'||'A' && c2 == 'p'|| "P" && c3 == 'r'||'R'){
+  else if(c1 == 'a' && c2 == 'p' && c3 == 'r'){
     mnth = 4;
   }
-  else if(c1 == 'm'||'M' && c2 == 'a'|| "A" && c3 == 'y'||'Y'){
+  else if(c1 == 'm' && c2 == 'a' && c3 == 'y'){
     mnth = 5;
   }
-  else if(c1 == 'j'||'J' && c2 == 'u'|| "U" && c3 == 'n'||'N'){
+  else if(c1 == 'j' && c2 == 'u' && c3 == 'n'){
     mnth = 6;
   }
-  else if(c1 == 'j'||'J' && c2 == 'u'|| "U" && c3 == 'l'||'L'){
+  else if(c1 == 'j' && c2 == 'u' && c3 == 'l'){
     mnth = 7;
   }
-  else if(c1 == 'a'||'A' && c2 == 'u'|| "U" && c3 == 'g'||'G'){
+  else if(c1 == 'a' && c2 == 'u' && c3 == 'g'){
     mnth = 8;
   }
-  else if(c1 == 's'||'S' && c2 == 'e'|| "E" && c3 == 'p'||'P'){
+  else if(c1 == 's' && c2 == 'e' && c3 == 'p'){
     mnth = 9;
   }
-  else if(c1 == 'o'||'O' && c2 == 'c'|| "C" && c3 == 't'||'T'){
+  else if(c1 == 'o' && c2 == 'c' && c3 == 't'){
     mnth = 10;
   }
-  else if(c1 == 'n'||'N' && c2 == 'o'|| "O" && c3 == 'v'||'V'){
+  else if(c1 == 'n' && c2 == 'o' && c3 == 'v'){
     mnth = 11;
   }
-  else if(c1 == 'd'||'D' && c2 == 'e'|| "E" && c3 == 'c'||'C'){
+  else if(c1 == 'd' && c2 == 'e' && c3 == 'c'){
     mnth = 12;
   }
   else{
